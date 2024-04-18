@@ -119,7 +119,7 @@ INSERT INTO `product` (`id`, `name`, `catagory`, `description`, `quantity`, `Pri
 (15, 'Mangoes', 'plant', "Tropical paradise in every bite; savor the sun-kissed sweetness of mango magic!", 64, 600, 'mangoes.png'),
 (16, 'Watermelon', 'plant', "Summer's cool, refreshing delight - dive into the juiciest slice of watermelon wonder!", 64, 300, 'watermelon.png'),
 (17, 'Grapes', 'plant', "Nature's candy, kissed by the sun - pop, savor, and delight in grape goodness!", 64, 400, 'grapes.png'),
-(17, 'Dragon Fruit', 'plant', "Exotic allure meets delicious surprise; experience the vibrant taste of dragon fruit delight!", 64, 400, 'dragon-fruit.png');
+(18, 'Dragon Fruit', 'plant', "Exotic allure meets delicious surprise; experience the vibrant taste of dragon fruit delight!", 64, 400, 'dragon-fruit.png');
 
 -- --------------------------------------------------------
 

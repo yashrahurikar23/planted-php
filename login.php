@@ -69,7 +69,7 @@ include "lib/connection.php";
 
 <body class="bg-gradient-primary" style="background-color: #D8FFD8;">
 
-    <div class="container">
+    <div class="container-fluid">
 
         <!-- Outer Row -->
       <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">

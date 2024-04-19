@@ -55,12 +55,12 @@ $result = null;
 
 <body class="bg-gradient-primary" style="background-color: #D8FFD8;">
 
-    <div class="container">
+    <div class="container-fluid">
 
      <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
      <div class="row justify-content-center">
 
-            <div class="col-xl-10 col-lg-12 col-md-9">
+        <div class="col-xl-10 col-lg-12 col-md-9">
         <div class="card o-hidden border-0 shadow-lg my-5" style="height: 75vh;">
             <div class="card-body p-0 h-100">
                 <!-- Nested Row within Card Body -->

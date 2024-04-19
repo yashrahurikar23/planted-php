@@ -2,51 +2,6 @@
 <!---footer start--->
 
 <br>
-<!-- <div class="footer">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-4 text-center">
-        <img src="img/logo.png" class="footer-img">
-        <p>Lorem ipsum dolor sit amet <br>
-       consectetur adipiscing elit.<br>
-       Lorem ipsum dolor sit amet</p>
-        <img src="img/social.png">
-        
-      </div>
-      <span id="footer-line"></span>
-      <div class="col-lg-3 text-center">
-        
-        <h5 class="footer-header">my account</h5>
-        <p>Lorem ipsum<br>
-        Lorem ipsum<br>
-        Lorem ipsum<br>
-        Lorem ipsum<br>
-        Lorem ipsum<br>
-        Lorem ipsum<br>
-        Lorem ipsum</p>
-        
-      </div>
-       <span  id="footer-line"></span>
-      <div class="col-lg-4 text-center">
-
-       <h5 class="footer-header">Shop</h5>
-
-      <p>Lorem ipsum<br>
-      Lorem ipsum<br>
-      Lorem ipsum<br>
-      Lorem ipsum<br>
-      Lorem ipsum<br>
-      Lorem ipsum</p>
-        
-        
-      </div>
-
-      
-    </div>
-  </div>
-</div> -->
-
-
     <!---footer end--->
     <br>
     <div class="container">

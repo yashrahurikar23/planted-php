@@ -1,5 +1,5 @@
 <?php
-
+include'header.php';
 include "lib/connection.php";
 $result = null;
   if (isset($_POST['u_submit'])) 
@@ -36,11 +36,11 @@ $result = null;
 <html lang="en">
 
 <head>
-	<title>Fashion</title>
+	<title>Planted</title>
 	<meta charset="UTF-8">
     <meta name="description" content="test">
     <meta name="keywords" content="HTML, CSS, BOOTSTRAP">
-    <meta name="author" content="Anik">
+    <meta name="author" content="Isha">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
@@ -53,19 +53,23 @@ $result = null;
 
 </head>
 
-<body class="bg-gradient-primary">
+<body class="bg-gradient-primary" style="background-color: #D8FFD8;">
 
     <div class="container">
 
      <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-        <div class="card o-hidden border-0 shadow-lg my-5">
-            <div class="card-body p-0">
+     <div class="row justify-content-center">
+
+            <div class="col-xl-10 col-lg-12 col-md-9">
+        <div class="card o-hidden border-0 shadow-lg my-5" style="height: 75vh;">
+            <div class="card-body p-0 h-100">
                 <!-- Nested Row within Card Body -->
-                <div class="row">
-                    <div class="col-lg-7">
-                        <div class="p-5">
+                <div class="row h-100">
+                    <div class="col-lg-6">
+                        <div class="p-5 d-flex flex-column justify-content-center h-100">
                             <div class="text-center">
-                                <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
+                                <h1 class="h4 text-gray-900 mb-2">Create an Account!</h1>
+                                <p class="text-gray-300 mb-4">Please register to continue.</p>
                                 <?php echo $result;  ?>
                             </div>
                                 <div class="form-group row">
@@ -80,7 +84,7 @@ $result = null;
                                 </div>
                                 <div class="form-group">
                                     <input type="email" class="form-control form-control-user" id="exampleInputEmail"
-                                        placeholder="Email Address" name="email">
+                                        placeholder="Email" name="email">
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
@@ -92,23 +96,26 @@ $result = null;
                                             id="exampleRepeatPassword" placeholder="Repeat Password" name="c_pass">
                                     </div>
                                 </div>
-                                <button type="submit" class="btn btn-primary btn-user btn-block" name="u_submit">Register Account</button>
+                                <button type="submit" class="btn btn-success btn-user btn-block" name="u_submit">Register</button>
                             
-
+                                
+                            </form>
                             <hr>
                             <div class="text-center">
-                                <a class="small" href="login.html">Already have an account? Login!</a>
+                                <a class="small" href="login.php">Already have an account? Login!</a>
                             </div>
                         </div>
                     </div>
+                    <div class="col-lg-6">
+                        <img src="./img/landing_banner.png" class="img-fluid h-100">
+                    </div>
                 </div>
+                </div>
+                </div>
+
             </div>
         </div>
-    </form>
-
     </div>
-
-
 </body>
 
 </html>

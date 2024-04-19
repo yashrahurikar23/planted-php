@@ -1,4 +1,6 @@
 <?php 
+include'header.php';
+include'lib/connection.php';
 
 SESSION_START();
 
@@ -41,8 +43,6 @@ include "lib/connection.php";
             echo "invalid";
         }
     }
-
-
 ?>
 
 
@@ -50,7 +50,7 @@ include "lib/connection.php";
 <html lang="en">
 
 <head>
-	<title>Fashion</title>
+	<title>Planted</title>
 	<meta charset="UTF-8">
     <meta name="description" content="test">
     <meta name="keywords" content="HTML, CSS, BOOTSTRAP">
@@ -67,7 +67,7 @@ include "lib/connection.php";
 
 </head>
 
-<body class="bg-gradient-primary">
+<body class="bg-gradient-primary" style="background-color: #D8FFD8;">
 
     <div class="container">
 
@@ -77,37 +77,37 @@ include "lib/connection.php";
 
             <div class="col-xl-10 col-lg-12 col-md-9">
 
-                <div class="card o-hidden border-0 shadow-lg my-5">
-                    <div class="card-body p-0">
+                <div class="card o-hidden border-0 shadow-lg my-5" style="height: 75vh;">
+                    <div class="card-body p-0 h-100">
                         <!-- Nested Row within Card Body -->
-                        <div class="row">
+                        <div class="row h-100">
                             <div class="col-lg-6">
-                                <div class="p-5">
+                                <div class="p-5 d-flex flex-column justify-content-center h-100">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+                                        <h1 class="h4 text-gray-900 mb-2">Welcome Back!</h1>
+                                        <p class="text-gray-300 mb-4">Please login to continue.</p>
                                     </div>
                                     <form class="user">
                                         <div class="form-group">
                                             <input type="email" class="form-control form-control-user"
                                                 id="exampleInputEmail" aria-describedby="emailHelp"
                                                 name="email"
-                                                placeholder="Enter Email Address">
+                                                placeholder="Email">
                                         </div>
                                         <div class="form-group">
                                             <input type="password" class="form-control form-control-user"
                                                 id="exampleInputPassword" placeholder="Password" name="password">
                                         </div>
-                                        <div class="form-group">
-                                            
-                                        </div>
-                                 
-                                            <input class="btn btn-primary btn-user btn-block" type="submit" name="submit" value="login">
-                                  
+                                            <input class="btn btn-success btn-user btn-block" type="submit" name="submit" value="login">
                                         <hr>
+                                    </form>
                                     <div class="text-center">
                                         <a class="small" href="register.php">Create an Account!</a>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="col-lg-6 ">
+                                  <img src="./img/landing_banner.png" class="img-fluid h-100">
                             </div>
                         </div>
                     </div>
@@ -117,7 +117,6 @@ include "lib/connection.php";
 
         </div>
 
-      </form>
 
     </div>
 

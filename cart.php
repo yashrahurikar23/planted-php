@@ -45,12 +45,7 @@ if(isset($_POST['order_btn'])){
                 $t=$row['quantity']-$product_item['quantity'];
                 $update_quantity_query = mysqli_query($conn, "UPDATE `product` SET quantity = '$t' WHERE id = '$update_id'");
                 
-
                 $flag=1;
-
-
-                
-
               }
               else
               {
@@ -72,9 +67,6 @@ if(isset($_POST['order_btn'])){
 
      }
   };
-
-
-
 }
 
 $id=$_SESSION['userid'];
@@ -99,7 +91,7 @@ if(isset($_GET['remove'])){
 
 ?>
 
-<div class="container pendingbody pt-4">
+<div class="container pendingbody p-4"  style="background-color: #D8FFD8;height:70vh;">
   <h5 class='mb-2'>Cart</h5>
   <table class="table">
     <thead>
@@ -157,7 +149,7 @@ if(isset($_GET['remove'])){
         <input type="number" class="form-control" placeholder="Phone Number" name="number">
       </div>
       <div class="form-group">
-      <input type="submit" value="Order Now" name="order_btn" class="btn btn-primary">
+      <input type="submit" value="Order Now" name="order_btn" class="btn btn-success">
     </div>
     </form>
   </div>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Fashion</title>
+	<title>Planted</title>
 	<meta charset="UTF-8">
     <meta name="description" content="test">
     <meta name="keywords" content="HTML, CSS, BOOTSTRAP">
@@ -67,8 +67,8 @@
         else
           {
           ?>
-            <a href="login.php">Login</a>
-            <a href="Register.php">Signup</a>
+            <a href="login.php" class='mx-2 bg-white rounded p-2' style="color: #19A519;text-decoration:none">Login</a>
+            <a href="Register.php" class='mx-2 bg-white rounded p-2' style="color: #19A519;text-decoration:none">Signup</a>
           <?php
           }
         ?>

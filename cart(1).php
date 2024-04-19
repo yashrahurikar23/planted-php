@@ -90,7 +90,7 @@ if(isset($_GET['remove'])){
 
 ?>
 
-<div class="container pendingbody mt-4">
+<div class="container mt-4 p-4 rounded"  style="background-color: #D8FFD8;height:70vh;">
   <h5 class='mb-2'>Cart</h5>
   <table class="table table-striped">
     <thead>
@@ -140,15 +140,15 @@ if(isset($_GET['remove'])){
         <input type="text" class="form-control" placeholder="Address line 1" name="address">
       </div>
       <div class="input-group form-group">
-        <input type="number" class="form-control" placeholder="Address line 2" name="mobnumber">
+        <input type="text" class="form-control" placeholder="Address line 2" name="mobnumber">
       </div>
       <div class="input-group form-group">
-        <input type="number" class="form-control" placeholder="Phone Number" name="number">
+        <input type="text" class="form-control" placeholder="Phone Number" name="number">
       </div>
 
       <div class="form-group">
-      <input type="submit" value="Order Now" name="order_btn" class="btn btn-primary">
-    </div>
+        <input type="submit" value="Order Now" name="order_btn" class="btn btn-success">
+      </div>
     </form>
   </div>
 </div>

@@ -26,14 +26,14 @@ else
 
   $select_cart = mysqli_query($conn, "SELECT * FROM `cart` WHERE productid = '$product_id'  && userid='$user_id'");
 
-  // if(mysqli_num_rows($select_cart) > 0){
-  //   // echo $message[] = 'product already added to cart';
+  if(mysqli_num_rows($select_cart) > 0){
+    echo $message[] = 'product already added to cart';
 
-  // }else{
-  //    $insert_product = mysqli_query($conn, "INSERT INTO `cart`(userid, productid, name, quantity, price) VALUES('$user_id', '$product_id', '$product_name', '$product_quantity', '$product_price')");
-  //  echo $message[] = 'product added to cart succesfully';
-  //  header('location:index.php');
-  // }
+  }else{
+     $insert_product = mysqli_query($conn, "INSERT INTO `cart`(userid, productid, name, quantity, price) VALUES('$user_id', '$product_id', '$product_name', '$product_quantity', '$product_price')");
+   echo $message[] = 'product added to cart succesfully';
+   header('location:index.php');
+  }
 
 }
 
@@ -52,7 +52,6 @@ else
         </div>
     </div>
     <div class="col-md-6">
-        <!-- <img src="./img/landing_banner.png" class="img-fluid"> -->
     </div>
   </div>
 </div>
@@ -64,49 +63,42 @@ else
 <!---top sell start---->
 
 <section>
-  <div class="container">
-      <div class="row">
-        <!-- <div class="col-md-12 text-center py-4">
-          <img src="img/mark.png">
-          <h4>All Products</h4>
-          <p>A passage of Lorem Ipsum you need here</p>
-        </div> -->
-    </div>
-  </div>
   <div style="background-color: #D8FFD8;">
-  <div class="container" >
-  <div class="row" >
-  <?php
+    <div class="container">
+      <div class="row bg-white">
+        <?php
           if (mysqli_num_rows($result) > 0) {
             // output data of each row
             while($row = mysqli_fetch_assoc($result)) {
               ?>
               <div class="col-md-4">
-            <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-              <div class="card m-2" style="width: 24rem;">
-                  <img class="card-img-top" style="width: 100%; height: 320px;" src="img/<?php echo $row['imgname']; ?>" >
-                  <div class="card-body">
-                      <h5 class="card-title"><?php echo $row["name"] ?></h5>
-                      <p class="card-text rounded-lg" style="color:#19A519;"><?php echo $row["Price"] ?></p>
-                      <input type="hidden" name="user_id" value="<?php echo $_SESSION['userid'];?>" >
-                      <input type="hidden" name="product_id" value="<?php echo $row['id']; ?>"> 
-                      <div class='d-flex flex-column'>
-                        <p name="product_description" ><?php echo $row['description']; ?></p> 
+                <form class="m-2 card"  action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+                      <img src="img/<?php echo $row['imgname']; ?>" >
+                    <div>
+                      <div>
+                        <div class="d-flex flex-column p-2">
+                          <div class="p-2 d-flex justify-content-between align-items-center">
+                            <h6><?php echo $row["name"] ?></h6> 
+                            <span><?php echo $row["Price"] ?></span> 
+                          </div>
+                          <input type="submit" class="btn btn btn-success" value="Add to cart" name="add_to_cart">
+                        </div>
+                        <input type="hidden" name="user_id" value="<?php echo $_SESSION['userid'];?>" >
+                        <input type="hidden" name="product_id" value="<?php echo $row['id']; ?>"> 
+                        <input type="hidden" name="product_name" value="<?php echo $row['name']; ?>">
+                        <input type="hidden" name="product_price" value="<?php echo $row['Price']; ?>">              
                       </div>
-                      <input type="submit" class="btn btn-primary" value="Add to cart" name="add_to_cart">
-                  </div>
+                    </div>
+                </form>
               </div>
-              </div>
-
-          </form>
             <?php 
-    }
-        } 
-        else 
+          }
+          } 
+            else 
             echo "0 results";
         ?>
-</div>
-</div>
+      </div>
+    </div>
   </div>
 </section>
 

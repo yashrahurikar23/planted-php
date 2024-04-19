@@ -30,17 +30,13 @@ $result = $conn -> query ($sql);
 </head>
 <body>
 
-<div class="container pendingbody">
-  <h5 class="mt-4">All Orders</h5>
-<table class="table">
+<div class="container pendingbody rounded mt-4 p-4" style="background-color: #D8FFD8;height:70vh;">
+  <h5 class="">All Orders</h5>
+  <table class="table table-striped">
   <thead>
     <tr>
-
-      <th scope="col">Name</th>
       <th scope="col">Address</th>
       <th scope="col">Phone</th>
-      <th scope="col">Send Money Number</th>
-      <th scope="col">Txid</th>
       <th scope="col">Total Product</th>
       <th scope="col">Total Price</th>
       <th scope="col">Status</th>
@@ -70,12 +66,8 @@ $result = $conn -> query ($sql);
               }*/
               ?>
     <tr>
-
-      <td><?php echo $row["name"] ?></td>
-      <td><?php echo $row["address"] ?></td>
+      <td><?php echo $row["address"] ?> <?php echo $row["mobnumber"] ?></td>
       <td><?php echo $row["phone"] ?></td>
-      <td><?php echo $row["mobnumber"] ?></td>
-      <td><?php echo $row["txid"] ?></td>
       <td><?php echo $row["totalproduct"] ?></td>
       <td><?php echo $row["totalprice"] ?></td>
       <td><?php echo $row["status"] ?></td>
@@ -87,6 +79,7 @@ $result = $conn -> query ($sql);
             echo "0 results";
         ?>
   </tbody>
+</table>
 </table>
 </div>
     

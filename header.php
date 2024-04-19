@@ -68,7 +68,7 @@
           {
           ?>
             <a href="login.php" class='mx-2 bg-white rounded p-2' style="color: #19A519;text-decoration:none">Login</a>
-            <a href="Register.php" class='mx-2 bg-white rounded p-2' style="color: #19A519;text-decoration:none">Signup</a>
+            <a href="register.php" class='mx-2 bg-white rounded p-2' style="color: #19A519;text-decoration:none">Signup</a>
           <?php
           }
         ?>
